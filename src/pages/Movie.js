@@ -14,7 +14,7 @@ function Movie() {
         if (!r.ok) {
           throw new Error("Movie not found");
         }
-        return res.json();
+        return r.json();
       })
       .then((data) => {
         setMovie(data);
@@ -26,6 +26,7 @@ function Movie() {
         setLoading(false);
       });
   }, [id]);
+  
   if (loading) return <p>Loading...</p>;
   return (
     <>

@@ -4,6 +4,7 @@ import MovieCard from "../components/MovieCard";
 
 function Home() {
   const [movies, setMovies] = useState([]);
+
   useEffect(() => {
     fetch("http://localhost:3000/movies")
       .then((res) => res.json())
@@ -12,18 +13,18 @@ function Home() {
   }, []);
 
   return (
-    <>
-      <header>
-        {/* What component should go here? */}
+   
+      <div>
+        
         <NavBar />
-      </header>
-      <main>
+      
+      
         <h1>Home Page</h1>
         {movies.map((movie) => (
           <MovieCard key={movie.id} movie={movie} />
         ))}
-      </main>
-    </>
+      
+        </div>
   );
 }
 

@@ -3,11 +3,11 @@ import {Link} from 'react-router-dom';
 function MovieCard({movie}) {
   
   return (
-    <article>
+    <div>
         <h2>{movie.title}</h2>
         {/* What should go here? */}
-        <Link to={`/movie/${movie.id}`}>View Details</Link>
-    </article>
+        <Link to={`/movie/${movie.id}`}>More info</Link>
+    </div>
   );
 };
 
