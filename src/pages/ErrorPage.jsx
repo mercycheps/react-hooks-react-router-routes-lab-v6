@@ -3,7 +3,7 @@ import NavBar from "../components/NavBar";
 
 function ErrorPage() {
     const error = useRouteError();
-    console.error(error);
+    console.error(error, "test fail");
     
     return (
     <div>
